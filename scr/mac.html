@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/arvore.css">
+    <link rel="shortcut icon" href="/scr/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/scr/css/box.css">
+    <title>Árvore Genealógica de SO</title>
+</head>
+<body>
+    <div class="tree">
+        <ul>
+            <li>
+                <a href="#" class="MacOS">Mac OS</a>
+                <ul>
+                    <li><a href="#" class="ClassicMacOS">Classic Mac OS</a></li>
+                    <li><a href="#" class="MacSX(macOS)">Mac OS X (macOS)</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="box box-MacOS">
+        <h2>Mac OS</h2>
+        <ion-icon name="exit-outline" class="iconexit"></ion-icon>
+        <p>
+            macOS é o nome dado ao sistema operacional dos computadores da Apple, usado em iMacs, Macbooks, Mac Pros, Mac Studios e Mac Minis produzidos pela Gigante de Cupertino. O sistema é o maior rival do Windows no mercado de computadores pessoais e está disponível desde 1984.
+        </p>
+        <p>
+            O nome é uma junção dos termos “mac” e “OS”. Mac deriva de Macintosh, o nome dado aos primeiros computadores lançados pela Apple na década de 80, enquanto “OS” é uma sigla para “Sistema operacional” em inglês.
+        </p>
+        <a href="https://canaltech.com.br/macos/o-que-e-macos/"><button>Leia Mais</button></a>
+    </div>
+
+    <div class="box box-ClassicMacOS">
+        <h2>Classic Mac OS</h2>
+        <ion-icon name="exit-outline" class="iconexit"></ion-icon>
+        <p>
+            Classic MAC OS é um termo geral usado para descrever software de sistema Macintosh antigo (Mac OS) anterior (e não incluindo) ao Mac OS X. Macs baseados em PowerPC executando versões do Mac OS X até 10.4 Tiger são capazes de empregar o ambiente Classic, proporcionando compatibilidade com aplicativos "Clássicos", desde que possam funcionar no Mac OS 9. Macs que usam processadores Intel e Apple Silicon não conseguem executar software "Clássico" e, portanto, devem empregar um emulador. Seu primeiro sistema foi lançado em 24 de janeiro de 1984.
+        </p>
+        <a href="https://apple.fandom.com/wiki/Classic_Mac_OS"><button>Leia Mais</button></a>
+    </div>
+
+    <div class="box box-MacSX(macOS)">
+        <h2>Mac OS X (macOS)</h2>
+        <ion-icon name="exit-outline" class="iconexit"></ion-icon>
+        <p>
+            o MacOS é um sistema operacional que vai além de apenas executar aplicativos: ele cria uma experiência envolvente e eficiente para usuários de Mac, destacando-se por sua estabilidade, design elegante e integração perfeita com o ecossistema Apple. 
+        </p>
+        <p>
+            Seja para trabalho profissional, entretenimento ou colaboração, o MacOS continua a ser uma escolha confiável para milhões de usuários ao redor do mundo. Portanto, utilizá-lo como principal recurso de TI nos computadores, notebooks e demais gadgets da empresa pode ser uma excelente ideia, se o assunto for produtividade e durabilidade dos equipamentos.
+        </p>
+        <a href="https://4infra.com.br/o-que-e-macos-e-para-que-serve/#:~:text=Em%20resumo%2C%20o%20MacOS%20é,perfeita%20com%20o%20ecossistema%20Apple."><button>Leia Mais</button></a>
+    </div>
+
+    <a href="/index.html"><button id="voltar">Voltar</button></a>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.tree a');
+            const boxes = document.querySelectorAll('.box');
+            const iconExits = document.querySelectorAll('.iconexit');
+
+            links.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const className = link.className;
+                    boxes.forEach(box => {
+                        if (box.classList.contains(`box-${className}`)) {
+                            box.style.display = 'block';
+                        }
+                    });
+                });
+            });
+
+            iconExits.forEach(iconExit => {
+                iconExit.addEventListener('click', () => {
+                    iconExit.parentElement.style.display = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

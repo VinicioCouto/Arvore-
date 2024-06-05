@@ -1,0 +1,67 @@
+.box{
+    position: absolute;
+    max-width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: rgb(244, 244, 244);
+    padding: 20px;
+    margin-left: 100px;
+    margin-top: 200px;
+    border-radius: 10px;
+    display: none;
+}
+
+.boxbsd{
+    display: none;
+}
+
+.box > h2{
+    margin-top: 0%;
+    color: #000000;
+}
+
+.box > button{
+    border: none;
+    background-color: #000000;
+    color: white;
+    width: 130px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button{
+    border: none;
+    background-color: #000000;
+    color: white;
+    width: 130px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.iconexit{
+    position: absolute;
+    margin-top: -50px;
+    font-size: 25px;
+    margin-left: 280px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.iconexit:hover{
+    color: rgb(91, 100, 98);
+    transform: scale(1.1);
+}
+
+.box > button:hover{
+    background-color: rgb(91, 100, 98);
+    transform: scale(1.1);
+}
+
+button:hover{
+    background-color: rgb(91, 100, 98);
+    transform: scale(1.1);
+}

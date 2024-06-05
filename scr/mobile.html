@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/arvore.css">
+    <link rel="shortcut icon" href="/scr/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/scr/css/box.css">
+    <title>Árvore Genealógica de SO</title>
+</head>
+<body>
+    <div class="tree">
+        <ul>
+            <li>
+                <a href="#" class="DispositivosMoveis">Dispositivos Móveis</a>
+                <ul>
+                    <li><a href="#" class="Android">Android</a></li>
+                    <li><a href="#" class="iOS">iOS</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="box box-DispositivosMoveis">
+        <h2>Dispositivos Móveis</h2>
+        <ion-icon name="exit-outline" class="iconexit"></ion-icon>
+        <p>
+            Os dispositivos móveis são os computadores de bolso. É possível realizar todas as tarefas que desenvolvemos no computador comum, mas com o diferencial da mobilidade. Podemos citar alguns exemplos de dispositivos móveis: smartphone, ultrabook, notebook, netbook, GPS, tablet. Estes aparelhos fazem parte cada vez mais de nossas vidas, o que exige conhecer um pouco mais sobre eles!
+        </p>
+        <a href="http://www.nuted.ufrgs.br/oa/dimos/modulo1.html"><button>Leia Mais</button></a>
+    </div>
+
+    <div class="box box-Android">
+        <h2>Android</h2>
+        <ion-icon name="exit-outline" class="iconexit"></ion-icon>
+        <p>
+            O Android é um sistema operacional móvel desenvolvido pela Google. Ele foi inicialmente lançado em setembro de 2008 e desde então se tornou o sistema operacional mais usado no mundo em dispositivos móveis, como smartphones e tablets. Neste artigo você vai conhecer mais sobre ele e descobrir por que ele é tão utilizado.
+        </p>
+        <p>
+            A principal função do Android é fornecer um ambiente operacional completo para dispositivos móveis. Ele gerencia o hardware do dispositivo, como processadores, memória, tela sensível ao toque, câmera, sensores, conectividade e muito mais. O Android fornece uma interface de usuário intuitiva e interativa, permitindo que os usuários acessem aplicativos, serviços e recursos do dispositivo.
+        </p>
+        <a href="https://www.dio.me/articles/o-que-e-android-conheca-o-sistema-operacional-mais-usado-no-mundo"><button>Leia Mais</button></a>
+    </div>
+
+    <div class="box box-iOS">
+        <h2>iOS (macOS)</h2>
+        <ion-icon name="exit-outline" class="iconexit"></ion-icon>
+        <p>
+            O iOS é o sistema operacional para aparelhos móveis desenvolvido pela Apple e lançado em 2007 junto com o primeiro iPhone. O lançamento teve um grande impacto sobre o mundo da tecnologia ao apresentar uma interface de uso intuitivo através de uma tela sensível ao toque e com a possibilidade de acessar as mais variadas ferramentas e aplicativos pelo celular.
+        </p>
+        <p>
+            O iPhone, com a primeira versão do iOS, consolidou o conceito de smartphone para o grande público, modificou a forma de interação das pessoas com o celular e influenciou o design de outros produtos que vieram depois dele.
+        </p>
+        <a href="https://canaltech.com.br/ios/o-que-e-ios/"><button>Leia Mais</button></a>
+    </div>
+
+    <a href="/index.html"><button id="voltar">Voltar</button></a>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.tree a');
+            const boxes = document.querySelectorAll('.box');
+            const iconExits = document.querySelectorAll('.iconexit');
+
+            links.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const className = link.className;
+                    boxes.forEach(box => {
+                        if (box.classList.contains(`box-${className}`)) {
+                            box.style.display = 'block';
+                        }
+                    });
+                });
+            });
+
+            iconExits.forEach(iconExit => {
+                iconExit.addEventListener('click', () => {
+                    iconExit.parentElement.style.display = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

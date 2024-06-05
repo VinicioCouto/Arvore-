@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400; 0,700; 1.400&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.071);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Old Standard TT", serifa;
+    height: 100vh;
+    background-image: url('/scr/img/image07.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.logoif{
+    width: 230px;
+    margin: 0px;
+    margin-top: -30px;
+}
+
+.titulo{
+    margin: 0%;
+    margin-top: -40px;
+    margin-left: 20px;
+    color: rgb(8, 145, 33);
+}
+
+.imgarvore{
+    width: 900px;
+    position: absolute;
+    margin-top: -140px;
+    margin-left: 500px;
+}
+
+.texto{
+    font-size: 23px;
+    margin-top: 150px;
+    margin-left: 30px;
+    width: 530px;
+    text-align: justify;
+    position: absolute;
+    color: rgb(8, 145, 33);
+}
+
+.botoes{
+    position: absolute;
+    margin-top: 350px;
+    margin-left: 100px;
+}
+
+button{
+    margin-right: 20px;
+    border: none;
+    background-color: rgb(8, 145, 33);
+    color: aliceblue;
+    width: 130px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(27, 184, 90);
+    transform: scale(1.1);
+}
